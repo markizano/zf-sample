@@ -1,7 +1,7 @@
 10
 
 dir
-23050
+23056
 http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Validate
 http://framework.zend.com/svn/framework
 
@@ -641,9 +641,6 @@ has-props
 
 1098
 
-Db
-dir
-
 Barcode.php
 file
 
@@ -677,6 +674,9 @@ has-props
 
 
 6340
+
+Db
+dir
 
 GreaterThan.php
 file
@@ -780,9 +780,6 @@ has-props
 
 6622
 
-Barcode
-dir
-
 Iban.php
 file
 
@@ -816,6 +813,9 @@ has-props
 
 
 7291
+
+Barcode
+dir
 
 Regex.php
 file

@@ -1,7 +1,7 @@
 10
 
 dir
-23050
+23056
 http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Service/DeveloperGarden/Response/ConferenceCall
 http://framework.zend.com/svn/framework
 
@@ -502,40 +502,6 @@ has-props
 
 1766
 
-UpdateConferenceTemplateParticipantResponse.php
-file
-
-
-
-
-2010-06-06T01:04:51.809188Z
-c07b59e7ba6f8e485ca62f7aacf79420
-2010-01-09T19:00:17.157528Z
-20166
-bkarwin
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1672
-
 GetConferenceTemplateResponseType.php
 file
 
@@ -570,14 +536,14 @@ has-props
 
 2971
 
-GetRunningConferenceResponse.php
+UpdateConferenceTemplateParticipantResponse.php
 file
 
 
 
 
 2010-06-06T01:04:51.809188Z
-5b3f9e6cd6c0a4ad2db40bea8e1a5551
+c07b59e7ba6f8e485ca62f7aacf79420
 2010-01-09T19:00:17.157528Z
 20166
 bkarwin
@@ -602,7 +568,7 @@ has-props
 
 
 
-1642
+1672
 
 ConferenceCallAbstract.php
 file
@@ -637,6 +603,40 @@ has-props
 
 
 2351
+
+GetRunningConferenceResponse.php
+file
+
+
+
+
+2010-06-06T01:04:51.809188Z
+5b3f9e6cd6c0a4ad2db40bea8e1a5551
+2010-01-09T19:00:17.157528Z
+20166
+bkarwin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1642
 
 UpdateConferenceResponse.php
 file

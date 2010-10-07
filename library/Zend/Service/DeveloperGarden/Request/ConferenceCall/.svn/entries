@@ -1,7 +1,7 @@
 10
 
 dir
-23050
+23056
 http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Service/DeveloperGarden/Request/ConferenceCall
 http://framework.zend.com/svn/framework
 
@@ -25,40 +25,6 @@ bkarwin
 
 
 44c647ce-9c0f-0410-b52a-842ac1e357ba
-
-RemoveConferenceTemplateParticipantRequest.php
-file
-
-
-
-
-2010-06-06T01:04:51.493187Z
-31504d663976393bfa9e303785291f0a
-2010-01-09T19:00:17.157528Z
-20166
-bkarwin
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2626
 
 CommitConferenceRequest.php
 file
@@ -94,14 +60,14 @@ has-props
 
 2056
 
-RemoveConferenceTemplateRequest.php
+RemoveConferenceTemplateParticipantRequest.php
 file
 
 
 
 
 2010-06-06T01:04:51.493187Z
-fd7e9f2a50ca1e16a504fd11f56dea70
+31504d663976393bfa9e303785291f0a
 2010-01-09T19:00:17.157528Z
 20166
 bkarwin
@@ -126,7 +92,7 @@ has-props
 
 
 
-2056
+2626
 
 UpdateParticipantRequest.php
 file
@@ -161,6 +127,40 @@ has-props
 
 
 3997
+
+RemoveConferenceTemplateRequest.php
+file
+
+
+
+
+2010-06-06T01:04:51.493187Z
+fd7e9f2a50ca1e16a504fd11f56dea70
+2010-01-09T19:00:17.157528Z
+20166
+bkarwin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2056
 
 GetParticipantStatusRequest.php
 file
@@ -434,40 +434,6 @@ has-props
 
 2614
 
-GetConferenceTemplateRequest.php
-file
-
-
-
-
-2010-06-06T01:04:51.501687Z
-fb8d6bfd46610833a6b382145e447669
-2010-01-09T19:00:17.157528Z
-20166
-bkarwin
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2047
-
 GetConferenceListRequest.php
 file
 
@@ -501,6 +467,40 @@ has-props
 
 
 2900
+
+GetConferenceTemplateRequest.php
+file
+
+
+
+
+2010-06-06T01:04:51.501687Z
+fb8d6bfd46610833a6b382145e447669
+2010-01-09T19:00:17.157528Z
+20166
+bkarwin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2047
 
 UpdateConferenceTemplateParticipantRequest.php
 file

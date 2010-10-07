@@ -1,7 +1,7 @@
 10
 
 dir
-23050
+23056
 http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Service/DeveloperGarden
 http://framework.zend.com/svn/framework
 
@@ -25,9 +25,6 @@ mabe
 
 
 44c647ce-9c0f-0410-b52a-842ac1e357ba
-
-LocalSearch
-dir
 
 BaseUserService.php
 file
@@ -62,6 +59,9 @@ has-props
 
 
 14176
+
+LocalSearch
+dir
 
 Exception.php
 file
@@ -131,40 +131,6 @@ has-props
 
 3892
 
-IpLocation.php
-file
-
-
-
-
-2010-06-06T01:04:52.157187Z
-3df9800e882fcea38c3ffdf5f382d27d
-2010-01-09T19:00:17.157528Z
-20166
-bkarwin
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4067
-
 VoiceCall.php
 file
 
@@ -198,6 +164,40 @@ has-props
 
 
 7712
+
+IpLocation.php
+file
+
+
+
+
+2010-06-06T01:04:52.157187Z
+3df9800e882fcea38c3ffdf5f382d27d
+2010-01-09T19:00:17.157528Z
+20166
+bkarwin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4067
 
 Request
 dir

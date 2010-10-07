@@ -1,7 +1,7 @@
 10
 
 dir
-23050
+23056
 http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Gdata/Photos/Extension
 http://framework.zend.com/svn/framework
 
@@ -26,14 +26,14 @@ bkarwin
 
 44c647ce-9c0f-0410-b52a-842ac1e357ba
 
-NumPhotos.php
+QuotaCurrent.php
 file
 
 
 
 
 2010-06-06T01:04:58.769187Z
-da63f874a28a8bc6a4ac07b5d6f31879
+8f939911b6ce191ce3b8918cad65d79f
 2010-01-06T02:05:09.675189Z
 20096
 bkarwin
@@ -58,7 +58,7 @@ has-props
 
 
 
-1791
+1831
 
 Id.php
 file
@@ -94,14 +94,14 @@ has-props
 
 1784
 
-QuotaCurrent.php
+NumPhotos.php
 file
 
 
 
 
 2010-06-06T01:04:58.769187Z
-8f939911b6ce191ce3b8918cad65d79f
+da63f874a28a8bc6a4ac07b5d6f31879
 2010-01-06T02:05:09.675189Z
 20096
 bkarwin
@@ -126,7 +126,7 @@ has-props
 
 
 
-1831
+1791
 
 Rotation.php
 file
@@ -366,40 +366,6 @@ has-props
 
 1806
 
-Location.php
-file
-
-
-
-
-2010-06-06T01:04:58.773187Z
-8234a42e1a9c1155586ec7ca308d20b8
-2010-01-06T02:05:09.675189Z
-20096
-bkarwin
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1801
-
 Height.php
 file
 
@@ -434,14 +400,14 @@ has-props
 
 1760
 
-MaxPhotosPerAlbum.php
+Location.php
 file
 
 
 
 
 2010-06-06T01:04:58.773187Z
-3f63f67eff1983a3ef769379b8dfface
+8234a42e1a9c1155586ec7ca308d20b8
 2010-01-06T02:05:09.675189Z
 20096
 bkarwin
@@ -466,7 +432,7 @@ has-props
 
 
 
-1862
+1801
 
 Size.php
 file
@@ -501,6 +467,40 @@ has-props
 
 
 1747
+
+MaxPhotosPerAlbum.php
+file
+
+
+
+
+2010-06-06T01:04:58.773187Z
+3f63f67eff1983a3ef769379b8dfface
+2010-01-06T02:05:09.675189Z
+20096
+bkarwin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1862
 
 CommentingEnabled.php
 file

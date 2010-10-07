@@ -1,15 +1,15 @@
 10
 
 dir
-23050
+23056
 http://framework.zend.com/svn/framework/standard/trunk/library/Zend
 http://framework.zend.com/svn/framework
 
 
 
-2010-10-05T15:30:55.436210Z
-23022
-jonathan_maron
+2010-10-07T17:01:21.468842Z
+23051
+mabe
 
 
 
@@ -26,10 +26,10 @@ jonathan_maron
 
 44c647ce-9c0f-0410-b52a-842ac1e357ba
 
-Dom
+File
 dir
 
-File
+Dom
 dir
 
 Log
@@ -158,10 +158,10 @@ dir
 Config
 dir
 
-Serializer
+Pdf
 dir
 
-Pdf
+Serializer
 dir
 
 Debug.php
@@ -373,21 +373,6 @@ has-props
 
 2669
 
-Markup
-dir
-
-Locale
-dir
-
-Barcode
-dir
-
-Acl
-dir
-
-Uri
-dir
-
 Json.php
 file
 
@@ -421,6 +406,21 @@ has-props
 
 
 17010
+
+Uri
+dir
+
+Acl
+dir
+
+Barcode
+dir
+
+Locale
+dir
+
+Markup
+dir
 
 Auth
 dir
@@ -502,13 +502,13 @@ dir
 Tag
 dir
 
-Tool
+Layout
 dir
 
 Date
 dir
 
-Layout
+Tool
 dir
 
 Test
@@ -554,13 +554,10 @@ dir
 Queue
 dir
 
-Filter
-dir
-
 InfoCard
 dir
 
-Mime
+Filter
 dir
 
 Crypt.php
@@ -596,6 +593,9 @@ has-props
 
 
 4491
+
+Mime
+dir
 
 Feed.php
 file
@@ -702,8 +702,39 @@ has-props
 
 6102
 
-Navigation
-dir
+Serializer.php
+file
+
+
+
+
+2010-06-06T01:05:16.205686Z
+92b9bbb596e58a5ee34b9f03c23a5ad7
+2010-01-24T17:39:14.707488Z
+20574
+mabe
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5893
 
 Pdf.php
 file
@@ -739,39 +770,8 @@ has-props
 
 49740
 
-Serializer.php
-file
-
-
-
-
-2010-06-06T01:05:16.205686Z
-92b9bbb596e58a5ee34b9f03c23a5ad7
-2010-01-24T17:39:14.707488Z
-20574
-mabe
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5893
+Navigation
+dir
 
 Measure
 dir

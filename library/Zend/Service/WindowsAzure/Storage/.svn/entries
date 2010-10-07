@@ -1,7 +1,7 @@
 10
 
 dir
-23050
+23056
 http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Service/WindowsAzure/Storage
 http://framework.zend.com/svn/framework
 
@@ -25,40 +25,6 @@ matthew
 
 
 44c647ce-9c0f-0410-b52a-842ac1e357ba
-
-DynamicTableEntity.php
-file
-
-
-
-
-2010-09-14T22:03:14.596047Z
-15c42d999e695419601857484f8dbe78
-2010-08-03T07:18:27.830331Z
-22773
-maartenba
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6191
 
 QueueMessage.php
 file
@@ -93,6 +59,40 @@ has-props
 
 
 3112
+
+DynamicTableEntity.php
+file
+
+
+
+
+2010-09-14T22:03:14.596047Z
+15c42d999e695419601857484f8dbe78
+2010-08-03T07:18:27.830331Z
+22773
+maartenba
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6191
 
 BatchStorageAbstract.php
 file
@@ -264,40 +264,6 @@ has-props
 
 8598
 
-SignedIdentifier.php
-file
-
-
-
-
-2010-09-14T22:03:14.604048Z
-ea0d116d79e0e3d8e7c484e0a29f0e7c
-2010-08-03T07:18:27.830331Z
-22773
-maartenba
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2496
-
 TableInstance.php
 file
 
@@ -332,14 +298,14 @@ has-props
 
 2117
 
-Blob.php
+SignedIdentifier.php
 file
 
 
 
 
 2010-09-14T22:03:14.604048Z
-bfc3a00361d0401d4c81e2225b6fd36b
+ea0d116d79e0e3d8e7c484e0a29f0e7c
 2010-08-03T07:18:27.830331Z
 22773
 maartenba
@@ -364,7 +330,7 @@ has-props
 
 
 
-78232
+2496
 
 LeaseInstance.php
 file
@@ -400,14 +366,14 @@ maartenba
 
 2489
 
-Batch.php
+Blob.php
 file
 
 
 
 
-2010-09-14T22:03:14.608049Z
-8d8a197163149ad78ea3f7a5e4f6b8ba
+2010-09-14T22:03:14.604048Z
+bfc3a00361d0401d4c81e2225b6fd36b
 2010-08-03T07:18:27.830331Z
 22773
 maartenba
@@ -432,7 +398,7 @@ has-props
 
 
 
-6514
+78232
 
 BlobContainer.php
 file
@@ -468,14 +434,14 @@ has-props
 
 3026
 
-Queue.php
+Batch.php
 file
 
 
 
 
-2010-09-14T22:03:14.612049Z
-e6f7ff9a8feab388d3a30235e709488e
+2010-09-14T22:03:14.608049Z
+8d8a197163149ad78ea3f7a5e4f6b8ba
 2010-08-03T07:18:27.830331Z
 22773
 maartenba
@@ -500,7 +466,7 @@ has-props
 
 
 
-20492
+6514
 
 TableEntity.php
 file
@@ -535,6 +501,40 @@ has-props
 
 
 9468
+
+Queue.php
+file
+
+
+
+
+2010-09-14T22:03:14.612049Z
+e6f7ff9a8feab388d3a30235e709488e
+2010-08-03T07:18:27.830331Z
+22773
+maartenba
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20492
 
 StorageEntityAbstract.php
 file

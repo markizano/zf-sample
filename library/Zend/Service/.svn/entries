@@ -1,7 +1,7 @@
 10
 
 dir
-23050
+23056
 http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Service
 http://framework.zend.com/svn/framework
 
@@ -25,9 +25,6 @@ jonathan_maron
 
 
 44c647ce-9c0f-0410-b52a-842ac1e357ba
-
-Yahoo
-dir
 
 StrikeIron.php
 file
@@ -63,6 +60,12 @@ has-props
 
 2968
 
+Yahoo
+dir
+
+Delicious
+dir
+
 ReCaptcha.php
 file
 
@@ -97,7 +100,7 @@ has-props
 
 12516
 
-Delicious
+SlideShare
 dir
 
 Akismet.php
@@ -134,8 +137,39 @@ has-props
 
 10224
 
-SlideShare
-dir
+Nirvanix.php
+file
+
+
+
+
+2010-06-06T01:04:52.241693Z
+afe0460a4af74e0dabe0cf33e3d37757
+2010-01-06T02:05:09.675189Z
+20096
+bkarwin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3583
 
 Exception.php
 file
@@ -171,39 +205,8 @@ has-props
 
 1093
 
-Nirvanix.php
-file
-
-
-
-
-2010-06-06T01:04:52.241693Z
-afe0460a4af74e0dabe0cf33e3d37757
-2010-01-06T02:05:09.675189Z
-20096
-bkarwin
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3583
+Amazon
+dir
 
 Audioscrobbler.php
 file
@@ -238,9 +241,6 @@ has-props
 
 
 20440
-
-Amazon
-dir
 
 Technorati.php
 file
@@ -344,6 +344,9 @@ has-props
 
 32520
 
+StrikeIron
+dir
+
 Abstract.php
 file
 
@@ -377,9 +380,6 @@ has-props
 
 
 1880
-
-StrikeIron
-dir
 
 ReCaptcha
 dir

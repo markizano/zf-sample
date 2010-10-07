@@ -1,7 +1,7 @@
 10
 
 dir
-23050
+23056
 http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Dojo/Form/Element
 http://framework.zend.com/svn/framework
 
@@ -264,14 +264,14 @@ has-props
 
 4127
 
-CurrencyTextBox.php
+ValidationTextBox.php
 file
 
 
 
 
 2010-06-06T01:04:49.617187Z
-f860606ef36ba15ba4c440f85be151e8
+0a5ffdb60de0895963f95e019a353adc
 2010-01-06T02:05:09.675189Z
 20096
 bkarwin
@@ -296,7 +296,7 @@ has-props
 
 
 
-3221
+5343
 
 ComboBox.php
 file
@@ -332,14 +332,14 @@ has-props
 
 4564
 
-ValidationTextBox.php
+CurrencyTextBox.php
 file
 
 
 
 
 2010-06-06T01:04:49.617187Z
-0a5ffdb60de0895963f95e019a353adc
+f860606ef36ba15ba4c440f85be151e8
 2010-01-06T02:05:09.675189Z
 20096
 bkarwin
@@ -364,7 +364,7 @@ has-props
 
 
 
-5343
+3221
 
 Button.php
 file
@@ -400,40 +400,6 @@ has-props
 
 3112
 
-TimeTextBox.php
-file
-
-
-
-
-2010-06-06T01:04:49.617187Z
-a80e38cf8663d42442057909908e91f9
-2010-01-06T02:05:09.675189Z
-20096
-bkarwin
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3980
-
 VerticalSlider.php
 file
 
@@ -467,6 +433,40 @@ has-props
 
 
 6010
+
+TimeTextBox.php
+file
+
+
+
+
+2010-06-06T01:04:49.617187Z
+a80e38cf8663d42442057909908e91f9
+2010-01-06T02:05:09.675189Z
+20096
+bkarwin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3980
 
 Textarea.php
 file

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 72
-/svn/framework/!svn/ver/22662/standard/trunk/library/Zend/Cache/Frontend
+/svn/framework/!svn/ver/23051/standard/trunk/library/Zend/Cache/Frontend
 END
 Page.php
 K 25
@@ -31,7 +31,7 @@ Class.php
 K 25
 svn:wc:ra_dav:version-url
 V 82
-/svn/framework/!svn/ver/22649/standard/trunk/library/Zend/Cache/Frontend/Class.php
+/svn/framework/!svn/ver/23051/standard/trunk/library/Zend/Cache/Frontend/Class.php
 END
 Function.php
 K 25
