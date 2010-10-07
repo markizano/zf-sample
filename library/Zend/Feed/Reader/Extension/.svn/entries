@@ -1,0 +1,123 @@
+10
+
+dir
+23050
+http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Feed/Reader/Extension
+http://framework.zend.com/svn/framework
+
+
+
+2010-07-24T17:37:36.201772Z
+22662
+mabe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+44c647ce-9c0f-0410-b52a-842ac1e357ba
+
+Atom
+dir
+
+Syndication
+dir
+
+DublinCore
+dir
+
+Thread
+dir
+
+Content
+dir
+
+Slash
+dir
+
+EntryAbstract.php
+file
+
+
+
+
+2010-07-25T10:44:31.533282Z
+aad1a226d7f32fdeaf981061d0c24eaa
+2010-07-24T17:37:36.201772Z
+22662
+mabe
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4620
+
+Podcast
+dir
+
+FeedAbstract.php
+file
+
+
+
+
+2010-06-06T01:04:52.973692Z
+4b6aa0801bc36cf0844127a17037ef7c
+2010-01-06T02:05:09.675189Z
+20096
+bkarwin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4034
+
+CreativeCommons
+dir
+
+WellFormedWeb
+dir
+
