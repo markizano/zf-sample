@@ -3,11 +3,8 @@
  *	Name: ~/includes/Hack/XSRF.php
  *	By: Mark Harris
  *	Description: Anti-XSRF Attack Strategies
- *	Depends: ~/etc/Osash.inc, ~/HTML/[*]/header.php
  *	Notes:
  *	
- *	Online Services Auction SuperHighway (osash)
- *	CopyRight (c) 2010 Mark Harris
  */
 
 $_ENV['XSRF'] = array();

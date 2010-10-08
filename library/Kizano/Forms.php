@@ -5,8 +5,6 @@
  *	@Description: Main Form class
  *	@Notes: Edit with Care
  *
- *	Skillet Cafe
- *	@CopyRight: (c) 2010 Markizano Draconus <markizano@markizano.net>
  */
 
 class Kizano_Forms extends Zend_Form{

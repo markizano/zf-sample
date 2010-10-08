@@ -1,13 +1,11 @@
 <?php
 /**
- *	@Name: ~/includes/library/Kizano/View.php
+ *	@Name: ~/library/Kizano/View.php
  *	@Date: 2010-05-04
- *	@Depends: ~/includes/class/View.php
+ *	@Depends: ~/library/Zend/View/Abstract.php
  *	@Description: The class Extension that drives the rendering scheme
  *	@Notes: Edit with care
  *	
- *	OSASH: Online services Auction SuperHighway
- *	@CopyRight: (c) 2010 Markizano Draconus <markizano@markizano.net>
  */
 
 /**

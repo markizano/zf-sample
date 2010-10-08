@@ -1,12 +1,10 @@
 <?php
 /**
- *	@Name: ~/includes/modules/forms/decorator.module
- *	@Depends: ~/includes/library/Zend/Form.php
- *	@Description: Redecorates the contact form to suit the site's needs
+ *	@Name: ~/library/Kizano/Forms/Decorator.php
+ *	@Depends: ~/library/Zend/Form.php
+ *	@Description: Redecorates the form to suit the site's needs
  *	@Notes: Edit with care
  *
- *	OSASH: Online Services Auction SuperHighway!
- *	@CopyRight: (c) 2010 Markizano Draconus <markizano@markizano.net>
  */
 
 class Kizano_Forms_Decorator extends Zend_Form_Decorator_Abstract{

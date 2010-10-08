@@ -103,6 +103,8 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 		$this->bootstrap('layout');
 		$this->_frontController = Zend_Controller_Front::getInstance();
 		$this->_frontController->setControllerDirectory($this->getResource('frontController')->controllers);
+		$this->_frontController->setDefaultModule('default');
+		$this->_frontController->setParam('useDefaultControllerAlways', true);
 		$this->_frontController->registerPlugin(new Kizano_View_Plugins_Layout);
 		$this->_frontController->unRegisterPlugin('Zend_Layout_Controller_Plugin_Layout');
 		return $this->_frontController;
@@ -113,12 +115,14 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 	 *	@return void
 	 */
 	protected function _initModules(){
-		return array_map(
+		$this->bootstrap('autoloader');
+		$modules = (array)$this->getResource('modules');
+		array_map(
 			array(
 				$this->getApplication()->getAutoLoader(),
 				'registerNamespace'
 			),
-			Current($this->getResource('modules'))
+			$modules
 		);
 	}
 
