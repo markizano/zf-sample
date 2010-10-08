@@ -81,13 +81,13 @@ class Kizano_View_Plugins_Layout extends Zend_Controller_Plugin_Abstract{
 	 * @return void
 	 */
 	public function preDispatch(Zend_Controller_Request_Abstract $request){
-		# For some reason, Zend_Filter likes to iterate over this function. Repetitively.
+		# For some reason, Zend_Filter likes to iterate over this function. Repeatedly.
 		if(empty(self::$_preDispatch)) self::$_preDispatch = true; else return false;
 		$view = Zend_Registry::getInstance()->get('view');
 		$render = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
-		$view->setScriptPath(DIR_INCLUDES.'layouts'.DS.'default');
+		$view->setScriptPath(DIR_APPLICATION.'layouts');
 		$render->setView($view)
-			->setViewBasePathSpec($view->template_dir)
+			->setViewBasePathSpec(DIR_APPLICATION.'layouts')
 			->setViewScriptPathSpec(':controller/:action.:suffix')
 			->setViewScriptPathNoControllerSpec(':action.:suffix')
 			->setViewSuffix('tpl');

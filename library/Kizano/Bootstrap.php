@@ -23,6 +23,11 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 	public $view;
 	protected $_config;
 
+	/**
+	 *	Overrides the default bootstrapping function to prevent autoloading plugins
+	 *	if they don't exist.
+	 *	@return void
+	 */
 	protected function _bootstrap($resource = null){
 		if(is_null($resource)){
 			foreach($this->_options['resources'] as $name => $resource){
@@ -40,45 +45,73 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
         }
 	}
 
+	/**
+	 *	Execution of the main dispatch from the front controller.
+	 *	@return array
+	 */
 	public function run(){
 		$this->bootstrap('frontController');
 		$this->_frontController->dispatch();
 		return $this->_options;
 	}
 
+	/**
+	 *	Initialize the configurations and store them in the registry.
+	 *	@return array
+	 */
 	protected function _initConfigs(){
 		Zend_Registry::getInstance()->isRegistered('config') || Zend_Registry::getInstance()->set('config', $this->_options);
 		return $this->_options;
 	}
 
+	/**
+	 *	Internal function to set a given resource given by the resource object in the
+	 *	application.ini configuration file.
+	 *	@return void
+	 */
 	protected function _setResource($name, $resource = null){
 		$this->_options['resources'][$name] = $resource;
 	}
 
-	public function getResource($name){return isset($this->_options['resources'][$name])? (object)$this->_options['resources'][$name]: null;}
+	/**
+	 *	Retrieves a resource defined by the application.ini
+	 *	@return Mixed
+	 */
+	public function getResource($name){
+		return isset($this->_options['resources'][$name])? (object)$this->_options['resources'][$name]: null;
+	}
 
+	/**
+	 *	Initializes the main autoloader and includes the native Doctrine autoloader.
+	 *	@return Zend_Loader_AutoLoader
+	 */
 	protected function _initAutoLoader(){
-		require_once 'Doctrine/Doctrine.php';
+		require_once 'Doctrine.php';
 		spl_autoload_register(array('Doctrine', 'autoload'));
 		$autoLoader = $this->getApplication()->getAutoLoader();
 		$this->bootstrap('configs');
-#		var_dump($this->getResource('autoloader'));die;
-		foreach($this->getResource('autoloader')->Namespaces as $namespace)
-			$autoLoader->registerNamespace($namespace);
 		$this->registerPluginResource('autoloader', $this->getApplication()->getAutoLoader());
 		return $autoLoader;
 	}
 
+	/**
+	 *	Initalizes the front controller before it dispatches
+	 *	@return Zend_Controller_Front
+	 */
 	protected function _initFrontController(){
 		$this->bootstrap('configs');
 		$this->bootstrap('layout');
 		$this->_frontController = Zend_Controller_Front::getInstance();
 		$this->_frontController->setControllerDirectory($this->getResource('frontController')->controllers);
 		$this->_frontController->registerPlugin(new Kizano_View_Plugins_Layout);
-		$this->_frontController->unRegisterPlugin('Zend_Layout_Controller_Plugin_Layout'); # <- Get rid of this annoying-ass class! >:|
+		$this->_frontController->unRegisterPlugin('Zend_Layout_Controller_Plugin_Layout');
 		return $this->_frontController;
 	}
 
+	/**
+	 *	Initializes the modules and registers their namespaces to ensure easy loading.
+	 *	@return void
+	 */
 	protected function _initModules(){
 		return array_map(
 			array(
@@ -91,7 +124,6 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 
 	/**
 	 * Initialize the cache
-	 *
 	 * @return Zend_Cache_Core
 	 */
 	protected function _initCache(){
@@ -100,19 +132,27 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 		$cache = Zend_Cache::factory(
 			'Core',
 			'File',
-			$this->getResource('cache')->frontendOptions,
-			$this->getResource('cache')->backendOptions
+			$this->getResource('cache')->frontendOptions
 		);
 		Zend_Registry::set('cache', $cache);
 		return $cache;
 	}
 
+	/**
+	 *	Initializes the sessions for storing user data over multiple page requests
+	 *	return array
+	 */
 	protected function _initSession(){
-		$this->_setResource('session', $session = new Zend_Session_Namespace(SESSION_NAME, true));
+		$session = new Zend_Session_Namespace(SESSION_NAME, true);
+		$this->_setResource('session', $session);
 		Zend_Registry::getInstance()->set('session', $session);
 		return $this->getResource('session');
 	}
 
+	/**
+	 *	Initialize the database.
+	 *	@return Doctrine_Manager
+	 */
 	protected function _initDB(){
 		$this->bootstrap('AutoLoader');
 		$DB = Doctrine_Manager::connection($this->getResource('db')->doctrine['dsn']);
@@ -120,39 +160,43 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 		return $DB;
 	}
 
+	/**
+	 *	Initialize the main layout handler.
+	 *	@return Zend_Layout
+	 */
 	protected function _initLayout(){
-		$this->bootstrap('view');
 		$layout = (array)$this->getResource('layout');
-		$layout['view'] = $this->view;
-		$layout['layoutPath'] = $this->view->template_dir;
+		$layout['layoutPath'] = DIR_APPLICATION.'layouts';
 		$layout['inflector'] = new Zend_Filter_Inflector(':script.:suffix');
 		$layout['inflector']->addRules(array(
 			':script'=>array(
 				'Word_CamelCaseToDash',
 				'StringToLower'
 			),
-			'suffix'=>$layout['suffix']
 		));
 		$this->_layout = Zend_Layout::startMVC($layout);
 		$this->_layout->setPluginClass('Kizano_Layout_Plugins_Layout');
-		$this->_layout->getView()->docType('XHTML1_STRICT');
+		$this->_layout->getView()->Doctype('XHTML1_STRICT');
 		$this->_layout->getView()->addHelperPath('Kizano/Layout/Helper/', 'Kizano_Layout_Helper');
-#		$this->_layout->getView()->addHelperPath('Osash/Layout/Helper/', 'Osash_Layout_Helper');
 		Zend_Registry::getInstance()->set('layout', $this->_layout);
 		return $this->_layout;
 	}
 
+	/**
+	 *	Initializes the module's view handler
+	 *	@return Zend_View
+	 */
 	protected function _initView(){
 		$this->bootstrap('autoloader');
+		$this->bootstrap('layout');
 		$reg = Zend_Registry::getInstance();
-		$this->view = Kizano_View::getInstance();
+		$this->view = $this->_layout->getView();
 		$this->view->doctype('XHTML1_STRICT');
 		$render = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
 		$render->setView($this->view)
 			->setViewBasePathSpec($this->view->template_dir)
 			->setViewScriptPathSpec(':controller/:action.:suffix')
-			->setViewScriptPathNoControllerSpec(':action.:suffix')
-			->setViewSuffix('tpl');
+			->setViewScriptPathNoControllerSpec(':action.:suffix');
 		$this->view->addHelperPath('Kizano/View/Helper', 'Kizano_View_Helper');
 		$reg->set('view', $this->view);
 		return $this->view;

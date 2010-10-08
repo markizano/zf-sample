@@ -18,8 +18,9 @@ define('ROOT_PATH', __DIR__);
 define('DIR_ROOT', ROOT_PATH.DS);
 
 define('DIR_HTML', DIR_ROOT.'html'.DS);
-define('DIR_LIBRARY', LIBRARY_PATH.DS);
-define('DIR_USER', APPLICATION_PATH.'user'.DS);
+define('DIR_APPLICATION', DIR_ROOT.'application'.DS);
+define('DIR_LIBRARY', DIR_ROOT.'library'.DS);
+define('DIR_USER', DIR_APPLICATION.'user'.DS);
 define('DIR_LOGS', DIR_ROOT.'logs'.DS);
 define('DIR_TMP', DIR_ROOT.'cache'.DS);
 define('DIR_CSS', DIR_HTML.'library'.DS.'css'.DS);

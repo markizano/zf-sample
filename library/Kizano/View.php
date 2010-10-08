@@ -35,6 +35,7 @@ class Kizano_View extends Zend_View_Abstract{
 
 	public function __construct(){
 		$config = Zend_Registry::getInstance()->get('config');
+		var_dump($config);
 		$this->config = $config['resources']['view'];
 
 		$this->_smarty = new Smarty();
