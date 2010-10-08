@@ -1,0 +1,11 @@
+
+SetEnv ENVIRONMENT local
+
+RewriteEngine On
+
+ErrorDocument 403 "Access Forbidden"
+
+#send all requests to zend framework entry point
+RewriteRule ^(.*)$ /public/$1 [L]
+
+RedirectMatch  403     /.git(/|$)

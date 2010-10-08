@@ -1,0 +1,34 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^(.*)\.(bak|old|tmp)$ - [NC,F,L]
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_URI} /favicon.ico
+RewriteRule ^.*$ - [NC,L]
+
+RewriteCond {REQUEST_URI} !^/ajax(.*)$
+RewriteRule ^.*$ index.php [NC,L]  
+
+# ETags don't work in multi-server environments, don't use them
+# @see http://developer.yahoo.com/performance/rules.html#etags
+FileETag none
+
+<IfModule mod_expires.c>
+ExpiresActive on
+ExpiresDefault "access plus 1 hour"
+</IfModule>
+
+<IfModule mod_deflate.c>
+# these are known to be safe with MSIE 6
+AddOutputFilterByType DEFLATE text/html text/plain text/xml
+
+# everything else may cause problems with MSIE 6
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/x-javascript application/javascript application/ecmascript
+AddOutputFilterByType DEFLATE application/rss+xml
+</IfModule>
+
+# php_value auto_append_file ../scripts/preload.php
