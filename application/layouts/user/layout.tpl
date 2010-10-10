@@ -5,17 +5,9 @@
 		<!-- to correct the unsightly Flash of Unstyled Content. http://www.bluerobot.com/web/css/fouc.asp -->
 		<script type="text/javascript"> </script>
 <?php
-	$this->headLink()
-		->appendStylesheet('default.css')
-		->appendStylesheet('colour.css')
-		->appendStylesheet('layout.css');
-	print  $this->headTitle().chr(10).
-	$this->headScript()
-		->prependFile('flex.js')
-		->prependFile('mootools.js')
-		->appendFile('default.js').chr(10).
-	$this->headStyle().chr(10).
-	$this->headLink().chr(10);
+	$this->headLink()->appendStylesheet('default.css');
+	$this->headScript()->prependFile('default.js');
+	print $this->headTitle().chr(10).$this->headLink().chr(10).$this->headScript().chr(10);
 ?>
 	</head>
 	<body>

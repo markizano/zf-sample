@@ -87,7 +87,6 @@ class Kizano_View_Plugins_Layout extends Zend_Controller_Plugin_Abstract{
 		$render = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
 		$view->setScriptPath(DIR_APPLICATION.'modules'.DS.$request->getModuleName().DS.'views'.DS.'scripts');
 		$render->setView($view)
-			->setViewBasePathSpec(DIR_APPLICATION.'layouts')
 			->setViewScriptPathSpec(':controller/:action.:suffix')
 			->setViewScriptPathNoControllerSpec(':action.:suffix')
 			->setViewSuffix('tpl');

@@ -175,8 +175,6 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 	protected function _initLayout(){
 		$layout = (array)$this->getResource('layout');
 		$this->_layout = Zend_Layout::startMVC($layout);
-		$this->_layout->getView()->Doctype('XHTML1_STRICT');
-		$this->_layout->getView()->addHelperPath('Kizano/Layout/Helper/', 'Kizano_Layout_Helper');
 		Zend_Registry::getInstance()->set('layout', $this->_layout);
 		return $this->_layout;
 	}
@@ -191,15 +189,16 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 		$reg = Zend_Registry::getInstance();
 		$this->view = $this->_layout->getView();
 		$this->view
+			->setBasePath(DIR_APPLICATION.'modules'.DS.':module/views/')
 			->addHelperPath('Kizano/View/Helper/', 'Kizano_View_Helper')
 			->doctype('XHTML1_STRICT')
 		;
 		$render = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
 		$render->setView($this->view)
-			->setViewBasePathSpec($this->view->template_dir)
+			->setViewBasePathSpec(DIR_APPLICATION.'modules'.DS.':module/views')
 			->setViewScriptPathSpec(':controller/:action.:suffix')
 			->setViewScriptPathNoControllerSpec(':action.:suffix');
-		$this->view->addHelperPath('Kizano/View/Helper', 'Kizano_View_Helper');
+		$this->_layout->setView($this->view);
 		$reg->set('view', $this->view);
 		return $this->view;
 	}
