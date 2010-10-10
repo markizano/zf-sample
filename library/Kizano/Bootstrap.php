@@ -174,17 +174,6 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 	 */
 	protected function _initLayout(){
 		$layout = (array)$this->getResource('layout');
-		$layout['inflector'] = new Zend_Filter_Inflector(':script.:suffix');
-		$layout['inflector']->addRules(array(
-			':script'=>array(
-				'Word_CamelCaseToDash',
-				'StringToLower'
-			),
-			':suffix'=>array(
-				'StringToLower'
-			),
-		));
-#var_dump($layout['inflector']);die;
 		$this->_layout = Zend_Layout::startMVC($layout);
 		$this->_layout->getView()->Doctype('XHTML1_STRICT');
 		$this->_layout->getView()->addHelperPath('Kizano/Layout/Helper/', 'Kizano_Layout_Helper');
@@ -201,7 +190,10 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 		$this->bootstrap('layout');
 		$reg = Zend_Registry::getInstance();
 		$this->view = $this->_layout->getView();
-		$this->view->doctype('XHTML1_STRICT');
+		$this->view
+			->addHelperPath('Kizano/View/Helper/', 'Kizano_View_Helper')
+			->doctype('XHTML1_STRICT')
+		;
 		$render = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
 		$render->setView($this->view)
 			->setViewBasePathSpec($this->view->template_dir)
