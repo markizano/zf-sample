@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 61
-/svn/framework/!svn/ver/22291/standard/trunk/library/Zend/Dom
+/svn/framework/!svn/ver/23062/standard/trunk/library/Zend/Dom
 END
 Exception.php
 K 25
@@ -13,5 +13,5 @@ Query.php
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svn/framework/!svn/ver/22291/standard/trunk/library/Zend/Dom/Query.php
+/svn/framework/!svn/ver/23062/standard/trunk/library/Zend/Dom/Query.php
 END

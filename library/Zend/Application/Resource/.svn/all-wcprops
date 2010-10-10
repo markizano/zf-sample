@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/svn/framework/!svn/ver/22968/standard/trunk/library/Zend/Application/Resource
+/svn/framework/!svn/ver/23058/standard/trunk/library/Zend/Application/Resource
 END
 Dojo.php
 K 25
@@ -21,11 +21,11 @@ svn:wc:ra_dav:version-url
 V 92
 /svn/framework/!svn/ver/22968/standard/trunk/library/Zend/Application/Resource/Translate.php
 END
-Exception.php
+Useragent.php
 K 25
 svn:wc:ra_dav:version-url
 V 92
-/svn/framework/!svn/ver/22609/standard/trunk/library/Zend/Application/Resource/Exception.php
+/svn/framework/!svn/ver/23058/standard/trunk/library/Zend/Application/Resource/Useragent.php
 END
 Cachemanager.php
 K 25
@@ -33,17 +33,23 @@ svn:wc:ra_dav:version-url
 V 95
 /svn/framework/!svn/ver/20785/standard/trunk/library/Zend/Application/Resource/Cachemanager.php
 END
-Navigation.php
+Exception.php
 K 25
 svn:wc:ra_dav:version-url
-V 93
-/svn/framework/!svn/ver/22882/standard/trunk/library/Zend/Application/Resource/Navigation.php
+V 92
+/svn/framework/!svn/ver/22609/standard/trunk/library/Zend/Application/Resource/Exception.php
 END
 Locale.php
 K 25
 svn:wc:ra_dav:version-url
 V 89
 /svn/framework/!svn/ver/20814/standard/trunk/library/Zend/Application/Resource/Locale.php
+END
+Navigation.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/framework/!svn/ver/22882/standard/trunk/library/Zend/Application/Resource/Navigation.php
 END
 Multidb.php
 K 25

@@ -1,7 +1,7 @@
 10
 
 dir
-23056
+23065
 http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Tool/Project/Context/Zf
 http://framework.zend.com/svn/framework
 
@@ -536,40 +536,6 @@ has-props
 
 1746
 
-ViewScriptsDirectory.php
-file
-
-
-
-
-2010-06-06T01:05:09.657188Z
-6ec2f4f04e66fc5234184fd80755449f
-2010-01-06T02:05:09.675189Z
-20096
-bkarwin
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1653
-
 TestApplicationControllerFile.php
 file
 
@@ -603,6 +569,40 @@ has-props
 
 
 3259
+
+ViewScriptsDirectory.php
+file
+
+
+
+
+2010-06-06T01:05:09.657188Z
+6ec2f4f04e66fc5234184fd80755449f
+2010-01-06T02:05:09.675189Z
+20096
+bkarwin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1653
 
 LayoutScriptsDirectory.php
 file
@@ -638,40 +638,6 @@ has-props
 
 1662
 
-PublicScriptsDirectory.php
-file
-
-
-
-
-2010-06-06T01:05:09.657188Z
-a399f4e8bb6acc3680ce9ba83ce4b6a5
-2010-01-06T02:05:09.675189Z
-20096
-bkarwin
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1654
-
 FormsDirectory.php
 file
 
@@ -706,14 +672,14 @@ has-props
 
 1633
 
-TestPHPUnitConfigFile.php
+PublicScriptsDirectory.php
 file
 
 
 
 
 2010-06-06T01:05:09.657188Z
-7a52d465a340443ad18e15463edf5f1e
+a399f4e8bb6acc3680ce9ba83ce4b6a5
 2010-01-06T02:05:09.675189Z
 20096
 bkarwin
@@ -738,7 +704,7 @@ has-props
 
 
 
-1645
+1654
 
 ConfigsDirectory.php
 file
@@ -774,14 +740,14 @@ has-props
 
 1641
 
-ApisDirectory.php
+TestPHPUnitConfigFile.php
 file
 
 
 
 
-2010-06-06T01:05:09.661194Z
-b561cbb784f6085702b840cb4d24f6f8
+2010-06-06T01:05:09.657188Z
+7a52d465a340443ad18e15463edf5f1e
 2010-01-06T02:05:09.675189Z
 20096
 bkarwin
@@ -806,7 +772,7 @@ has-props
 
 
 
-1629
+1645
 
 ProjectProviderFile.php
 file
@@ -841,6 +807,40 @@ has-props
 
 
 4100
+
+ApisDirectory.php
+file
+
+
+
+
+2010-06-06T01:05:09.661194Z
+b561cbb784f6085702b840cb4d24f6f8
+2010-01-06T02:05:09.675189Z
+20096
+bkarwin
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1629
 
 DbTableDirectory.php
 file
@@ -910,17 +910,17 @@ has-props
 
 6468
 
-TestApplicationDirectory.php
+ApplicationDirectory.php
 file
 
 
 
 
 2010-06-06T01:05:09.661194Z
-57ff320ee2f7a5061b19a7498d4dfe67
-2010-01-06T02:05:09.675189Z
-20096
-bkarwin
+ac304245ef5ebab57c1587513dde3661
+2010-02-02T21:45:51.512306Z
+20851
+ralph
 has-props
 
 
@@ -942,7 +942,7 @@ has-props
 
 
 
-1669
+2305
 
 CacheDirectory.php
 file
@@ -978,17 +978,17 @@ has-props
 
 1632
 
-ApplicationDirectory.php
+TestApplicationDirectory.php
 file
 
 
 
 
 2010-06-06T01:05:09.661194Z
-ac304245ef5ebab57c1587513dde3661
-2010-02-02T21:45:51.512306Z
-20851
-ralph
+57ff320ee2f7a5061b19a7498d4dfe67
+2010-01-06T02:05:09.675189Z
+20096
+bkarwin
 has-props
 
 
@@ -1010,7 +1010,7 @@ has-props
 
 
 
-2305
+1669
 
 AbstractClassFile.php
 file

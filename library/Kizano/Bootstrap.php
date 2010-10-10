@@ -78,7 +78,8 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 	 *	@return Mixed
 	 */
 	public function getResource($name){
-		return isset($this->_options['resources'][$name])? (object)$this->_options['resources'][$name]: null;
+		return isset($this->_options['resources'][$name])? 
+			(object)$this->_options['resources'][$name]: null;
 	}
 
 	/**
@@ -147,7 +148,8 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 	 *	return array
 	 */
 	protected function _initSession(){
-		$session = new Zend_Session_Namespace(SESSION_NAME, true);
+		$sess = $this->getResource('session');
+		$session = new Zend_Session_Namespace($sess->name, true);
 		$this->_setResource('session', $session);
 		Zend_Registry::getInstance()->set('session', $session);
 		return $this->getResource('session');
@@ -159,7 +161,9 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 	 */
 	protected function _initDB(){
 		$this->bootstrap('AutoLoader');
-		$DB = Doctrine_Manager::connection($this->getResource('db')->doctrine['dsn']);
+		$config = $this->getResource('db');
+		$dsn = "mysql://$config->user:$config->pass@$config->host/$config->dbase";
+		$DB = Doctrine_Manager::connection($dsn);
 		Zend_Registry::getInstance()->set('db', $DB);
 		return $DB;
 	}
@@ -170,16 +174,18 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 	 */
 	protected function _initLayout(){
 		$layout = (array)$this->getResource('layout');
-		$layout['layoutPath'] = DIR_APPLICATION.'layouts';
 		$layout['inflector'] = new Zend_Filter_Inflector(':script.:suffix');
 		$layout['inflector']->addRules(array(
 			':script'=>array(
 				'Word_CamelCaseToDash',
 				'StringToLower'
 			),
+			':suffix'=>array(
+				'StringToLower'
+			),
 		));
+#var_dump($layout['inflector']);die;
 		$this->_layout = Zend_Layout::startMVC($layout);
-		$this->_layout->setPluginClass('Kizano_Layout_Plugins_Layout');
 		$this->_layout->getView()->Doctype('XHTML1_STRICT');
 		$this->_layout->getView()->addHelperPath('Kizano/Layout/Helper/', 'Kizano_Layout_Helper');
 		Zend_Registry::getInstance()->set('layout', $this->_layout);

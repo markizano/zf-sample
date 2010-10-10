@@ -1,7 +1,7 @@
 10
 
 dir
-23056
+23065
 http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Validate/File
 http://framework.zend.com/svn/framework
 
@@ -128,40 +128,6 @@ has-props
 
 5322
 
-IsCompressed.php
-file
-
-
-
-
-2010-09-14T22:03:16.184066Z
-c7fd657ffbe56971adb657f05cdc50d6
-2010-07-25T14:50:46.075445Z
-22668
-thomas
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4661
-
 NotExists.php
 file
 
@@ -195,6 +161,40 @@ has-props
 
 
 2519
+
+IsCompressed.php
+file
+
+
+
+
+2010-09-14T22:03:16.184066Z
+c7fd657ffbe56971adb657f05cdc50d6
+2010-07-25T14:50:46.075445Z
+22668
+thomas
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4661
 
 ExcludeMimeType.php
 file
@@ -264,40 +264,6 @@ has-props
 
 11193
 
-Crc32.php
-file
-
-
-
-
-2010-09-14T22:03:16.184066Z
-26311b5559896d20e00b0e0f255582ed
-2010-07-25T14:50:46.075445Z
-22668
-thomas
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4918
-
 Extension.php
 file
 
@@ -331,6 +297,40 @@ has-props
 
 
 6007
+
+Crc32.php
+file
+
+
+
+
+2010-09-14T22:03:16.184066Z
+26311b5559896d20e00b0e0f255582ed
+2010-07-25T14:50:46.075445Z
+22668
+thomas
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4918
 
 ImageSize.php
 file
@@ -468,40 +468,6 @@ has-props
 
 5458
 
-WordCount.php
-file
-
-
-
-
-2010-09-14T22:03:16.196048Z
-8a45e9d4449f44f44ff4b8251e9445cc
-2010-07-25T14:50:46.075445Z
-22668
-thomas
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3110
-
 Upload.php
 file
 
@@ -535,6 +501,40 @@ has-props
 
 
 7742
+
+WordCount.php
+file
+
+
+
+
+2010-09-14T22:03:16.196048Z
+8a45e9d4449f44f44ff4b8251e9445cc
+2010-07-25T14:50:46.075445Z
+22668
+thomas
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3110
 
 Md5.php
 file

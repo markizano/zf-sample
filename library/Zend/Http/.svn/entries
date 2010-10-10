@@ -1,15 +1,15 @@
 10
 
 dir
-23056
+23065
 http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Http
 http://framework.zend.com/svn/framework
 
 
 
-2010-08-08T10:29:09.519752Z
-22810
-shahar
+2010-10-07T20:25:17.212760Z
+23058
+matthew
 
 
 
@@ -59,6 +59,40 @@ has-props
 
 
 12036
+
+UserAgent.php
+file
+
+
+
+
+2010-10-09T22:32:37.930102Z
+3d538d8e3400c4686a3d1fe686c0e7cb
+2010-10-07T20:25:17.212760Z
+23058
+matthew
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+25745
 
 Client.php
 file
@@ -195,6 +229,9 @@ has-props
 
 
 12956
+
+UserAgent
+dir
 
 Client
 dir

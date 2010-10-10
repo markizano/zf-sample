@@ -99,17 +99,17 @@ svn:wc:ra_dav:version-url
 V 49
 /!svn/ver/7492/tags/1.2.2/lib/Doctrine/Export.php
 END
-Validator.php
-K 25
-svn:wc:ra_dav:version-url
-V 52
-/!svn/ver/7492/tags/1.2.2/lib/Doctrine/Validator.php
-END
 Inflector.php
 K 25
 svn:wc:ra_dav:version-url
 V 52
 /!svn/ver/7492/tags/1.2.2/lib/Doctrine/Inflector.php
+END
+Validator.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/7492/tags/1.2.2/lib/Doctrine/Validator.php
 END
 EventListener.php
 K 25
@@ -141,23 +141,23 @@ svn:wc:ra_dav:version-url
 V 49
 /!svn/ver/7492/tags/1.2.2/lib/Doctrine/Column.php
 END
-Pager.php
-K 25
-svn:wc:ra_dav:version-url
-V 48
-/!svn/ver/7492/tags/1.2.2/lib/Doctrine/Pager.php
-END
 Exception.php
 K 25
 svn:wc:ra_dav:version-url
 V 52
 /!svn/ver/7492/tags/1.2.2/lib/Doctrine/Exception.php
 END
-Connection.php
+Pager.php
 K 25
 svn:wc:ra_dav:version-url
-V 53
-/!svn/ver/7492/tags/1.2.2/lib/Doctrine/Connection.php
+V 48
+/!svn/ver/7492/tags/1.2.2/lib/Doctrine/Pager.php
+END
+Tree.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/7492/tags/1.2.2/lib/Doctrine/Tree.php
 END
 Expression.php
 K 25
@@ -165,11 +165,11 @@ svn:wc:ra_dav:version-url
 V 53
 /!svn/ver/7492/tags/1.2.2/lib/Doctrine/Expression.php
 END
-Tree.php
+Connection.php
 K 25
 svn:wc:ra_dav:version-url
-V 47
-/!svn/ver/7492/tags/1.2.2/lib/Doctrine/Tree.php
+V 53
+/!svn/ver/7492/tags/1.2.2/lib/Doctrine/Connection.php
 END
 Hook.php
 K 25

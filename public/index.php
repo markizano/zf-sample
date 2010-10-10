@@ -7,7 +7,7 @@
  *	
  */
 
-require_once __DIR__.'/../constants.php';
+require_once __DIR__.'/../application/configs/constants.php';
 
 /** Zend_Application */
 require_once 'Zend/Application.php';  

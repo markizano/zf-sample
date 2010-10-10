@@ -1,6 +1,6 @@
 <?php
 
-class Kizano_Layout_Plugin_Layout extends Zend_Controller_Plugin_Abstract{
+class Kizano_Layout_Plugins_Layout extends Zend_Controller_Plugin_Abstract{
 	protected $_layoutActionHelper = null;
 
 	/**
@@ -67,8 +67,8 @@ class Kizano_Layout_Plugin_Layout extends Zend_Controller_Plugin_Abstract{
 	 */
 	public function preDispatch(Zend_Controller_Request_Abstract $request){
 		$reg = Zend_Registry::getInstance();
-		$layout = $this->getLayout;
-		if(ADMIN_REQUEST){
+		$layout = $this->getLayout();
+		if($request->getModuleName() == 'admin'){
 			$layout->setLayoutPath(DIR_APPLICATION.'layouts'.DS.'admin');
 			$layout->setViewBasePath(DIR_APPLICATION.'layouts'.DS.'admin', 'Kizano_Layout_Admin');
 		}else{
