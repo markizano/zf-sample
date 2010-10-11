@@ -1,5 +1,18 @@
 
+To get this application to work on a server, simply drop it in the web root and let it run.
 
-./.htaccess
-./constants.php
-./application/configs/application.ini
+Some additional modules depended by this site include:
+
+PHP:
+	tidy
+	libxml
+	SPL
+
+Apache:
+	rewrite_module
+
+WARNING: This application is not ready for production BY FAR!
+	My apologies for the incompleteness...
+
+Any questions, comments, concerns, feel free to contact Markizano Draconus <markizano@markizano.net>
+
