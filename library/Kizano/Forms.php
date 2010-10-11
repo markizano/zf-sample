@@ -91,6 +91,18 @@ class Kizano_Forms extends Zend_Form{
 	}
 
 	/**
+	 *	Form to allow the end-user to select an advertisement to verify on their site.
+	 *	@param	ads		Array		The list of ads to select
+	 *	@return			Kizano_Forms
+	 */
+	public function selectAd($ads){
+		# Here is where we would allow the user to select an advertisement to verify.
+		# Stopping here to provide example of work.
+		var_dump($ads);
+		return $this->_getForm();
+	}
+
+	/**
 	 *	Adds a submit button, sets the elements and renders the form. Returns the result.
 	 *	@return		String		The rendered form, complete with submit button.
 	 */

@@ -37,5 +37,35 @@ class Kizano_Misc{
 		$session->flash = (array)null;
 		return nl2br($result);
 	}
+
+	/**
+	 *	Cleans a URL so it's safe to print to the browser without issues.
+	 *	@param uri		String		The URL to parse
+	 *	@return			String		The clean URL to print
+	 */
+	public static function cleanUrl($uri){
+		$result = null;
+		$url = htmlEntities($uri, ENT_QUOTES, 'utf-8');
+		$parse = parse_url($url);
+		$result = "$parse[scheme]://";
+		$parse['path'] = ltrim($parse['path'], '/');
+		foreach(array('user', 'pass', 'path', 'query', 'fragment') as $p){
+			if(isset($parse[$p])) $parse[$p] = urlEncode($parse[$p]);
+		}
+		if(!empty($parse['user'])){
+			$result .= "$parse[user]";
+			if(empty($parse['pass'])){
+				$result .= '@';
+			}else{
+				$result .= ":$parse[pass]@";
+			}
+		}
+		$result .= "$parse[host]/$parse[path]";
+		if(!empty($parse['query']))
+			$result .= "?$parse[query]";
+		if(!empty($parse['fragment']))
+			$result .= "#$parse[fragment]";
+		return $result;
+	}
 }
 
