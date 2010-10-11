@@ -14,6 +14,7 @@
 		<div id="PAGE">
 <?php
 	print $this->render('header.tpl').
+		$this->flash.
 		$this->placeholder('layout-content').
 		$this->render('footer.tpl');
 ?>

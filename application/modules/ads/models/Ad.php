@@ -15,7 +15,9 @@ class Ads_Models_Ad{
 	 *	@return			Array		The ads retrieved from the remote page.
 	 */
 	public function fetchAds($post){
-		$this->_client->setUri($post->url);
+		$this->_client->setUri($post['url']);
+		$request = $this->_client->request('GET')->getBody();
+		var_dump($request);die;
 	}
 
 	/**

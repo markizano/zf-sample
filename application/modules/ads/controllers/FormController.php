@@ -35,13 +35,30 @@ class Ads_FormController extends Zend_Controller_Action{
 		$this->_ad = new Ads_Models_Ad();
 	}
 
+	/**
+	 *	Handles the default form controller action.
+	 *	@return void
+	 */
 	public function indexAction(){
 		$this->view->form = $this->_form->ads();
 	}
 
+	/**
+	 *	Handles the advertisement action after the form is posted.
+	 *	@return void
+	 */
 	public function adAction(){
-		$ads = $this->_ad->fetchAds($this->_request->getPost());
-		$this->view->carousel = $this->_ad->generateCarousel($ads);
+		if($this->_request->isPost()){
+			if($this->_form->isValid($this->_request->getParams())){
+				$ads = $this->_ad->fetchAds($this->_request->getPost());
+				var_dump($ads);die;
+				$this->view->carousel = $this->_ad->generateCarousel($ads);
+			}else{
+				var_dump($this->_form);die;
+			}
+		}else{
+			$this->_helper->redirector->gotoUrl('/ads/form/');
+		}
 	}
 }
 

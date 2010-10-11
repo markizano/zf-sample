@@ -74,7 +74,7 @@ class Kizano_Forms extends Zend_Form{
 			'url',
 			new Zend_Config(array(
 				'id'=>'url',
-				'label'=>'URL of the site hosting the ad:',
+				'label'=>'URL of your site hosting the ad:',
 			), true)
 		);
 
@@ -86,6 +86,7 @@ class Kizano_Forms extends Zend_Form{
 			), true)
 		);
 
+		$this->_fields->url->addValidator('Kizano_Validate_Url');
 		return $this->_getForm();
 	}
 

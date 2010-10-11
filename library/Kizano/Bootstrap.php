@@ -96,14 +96,6 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 	}
 
 	/**
-	 *	Sets up the resource autoloader for the modules.
-	 *	@return		Zend_Loader_Autoloader_Resource
-	 */
-#	protected function _initModules(){
-#		$resourceLoader = new Zend_Loader_Autoloader_Resource();
-#	}
-
-	/**
 	 *	Initalizes the front controller before it dispatches
 	 *	@return Zend_Controller_Front
 	 */
@@ -156,10 +148,12 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 	 *	return array
 	 */
 	protected function _initSession(){
+		$this->bootstrap('view');
 		$sess = $this->getResource('session');
 		$session = new Zend_Session_Namespace($sess->name, true);
 		$this->_setResource('session', $session);
 		Zend_Registry::getInstance()->set('session', $session);
+		$this->view->flash = Kizano_Misc::getFlash();
 		return $this->getResource('session');
 	}
 
