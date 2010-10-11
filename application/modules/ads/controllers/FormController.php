@@ -50,11 +50,14 @@ class Ads_FormController extends Zend_Controller_Action{
 	public function adAction(){
 		if($this->_request->isPost()){
 			if($this->_form->isValid($this->_request->getParams())){
-				$ads = $this->_ad->fetchAds($this->_request->getPost());
-				var_dump($ads);die;
-				$this->view->carousel = $this->_ad->generateCarousel($ads);
+				$ads = $this->_ad->fetchAds($this->_request->getPost(), $this->view->Doctype());
+				$this->view->form = $this->_form->selectAd($ads);
 			}else{
-				var_dump($this->_form);die;
+				Kizano_Misc::flash(
+					"There was an error processing your request. ".
+					"Please correct the errors below and resubmit your form."
+				);
+				$this->_helper->redirector->gotoUrl('/ads/form/');
 			}
 		}else{
 			$this->_helper->redirector->gotoUrl('/ads/form/');
