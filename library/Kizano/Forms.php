@@ -9,7 +9,6 @@
 
 class Kizano_Forms extends Zend_Form{
 
-	protected $_form;
 	protected $_fields;
 	protected $_defaults = array();
 	protected $view;
@@ -33,28 +32,6 @@ class Kizano_Forms extends Zend_Form{
 		$this->clearDecorators();
 		$this->_fields = (object)array();
 		return $this;
-	}
-
-	/**
-	 *	Adds a submit button, sets the elements and renders the form. Returns the result.
-	 *	@return		String		The rendered form, complete with submit button.
-	 */
-	protected function _Form(){
-		$this->_fields->submit = new Zend_Form_Element_Submit(
-			'submit',
-			array(
-				'label'=>'Submit',
-				'value'=>'Submit'
-			)
-		);
-		$this->setElements((array)$this->_fields);
-		$this->setElementDecorators(
-			array(
-				'ViewHelper',
-				new Kizano_Forms_Decorator(array('tag'=>'div'))
-			)
-		);
-		return $this->render($this->view);
 	}
 
 	/**
@@ -82,9 +59,8 @@ class Kizano_Forms extends Zend_Form{
 	 */
 	public function ads(){
 		$this->setName('Advertise');
-		$this->setAction('/ads/form');
-		$this->setAttrib('id', 'frmLogin');
-		$this->_form = 'login';
+		$this->setAction('/ads/form/ad');
+		$this->setAttrib('id', 'Advertisement');
 
 		$this->_fields->url = new Zend_Form_Element_Text(
 			'url',
@@ -98,11 +74,41 @@ class Kizano_Forms extends Zend_Form{
 			'url',
 			new Zend_Config(array(
 				'id'=>'url',
-				'label'=>'URL:',
+				'label'=>'URL of the site hosting the ad:',
 			), true)
 		);
 
-		return $this->_Form();
+		$this->_fields->ad = new Zend_Form_Element_Text(
+			'ad',
+			new Zend_Config(array(
+				'id'=>'ad',
+				'label'=>'Advertising company domain (e.g. AdBrite.com, Pulse360.com, NetBlade.com, etc.):',
+			), true)
+		);
+
+		return $this->_getForm();
+	}
+
+	/**
+	 *	Adds a submit button, sets the elements and renders the form. Returns the result.
+	 *	@return		String		The rendered form, complete with submit button.
+	 */
+	protected function _getForm(){
+		$this->_fields->submit = new Zend_Form_Element_Submit(
+			'submit',
+			array(
+				'label'=>'Submit',
+				'value'=>'Submit'
+			)
+		);
+		$this->setElements((array)$this->_fields);
+		$this->setElementDecorators(
+			array(
+				'ViewHelper',
+				new Kizano_Forms_Decorator(array('tag'=>'div'))
+			)
+		);
+		return $this->render($this->view);
 	}
 }
 

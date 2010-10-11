@@ -91,9 +91,17 @@ class Kizano_Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
 		spl_autoload_register(array('Doctrine', 'autoload'));
 		$autoLoader = $this->getApplication()->getAutoLoader();
 		$this->bootstrap('configs');
-		$this->registerPluginResource('autoloader', $this->getApplication()->getAutoLoader());
+		$this->registerPluginResource('autoloader', $autoLoader);
 		return $autoLoader;
 	}
+
+	/**
+	 *	Sets up the resource autoloader for the modules.
+	 *	@return		Zend_Loader_Autoloader_Resource
+	 */
+#	protected function _initModules(){
+#		$resourceLoader = new Zend_Loader_Autoloader_Resource();
+#	}
 
 	/**
 	 *	Initalizes the front controller before it dispatches

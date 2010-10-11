@@ -39,7 +39,7 @@ set_include_path(
 	implode(
 		PATH_SEPARATOR,
 		array(
-			DIR_APPLICATION,
+			DIR_APPLICATION.'modules',
 			DIR_LIBRARY,
 			get_include_path(),
 		)
